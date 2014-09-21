@@ -1,7 +1,24 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+class Registered extends User {
+    
+    public function __construct($user_level, $user_id) {
+        parent::__construct($user_id);
+        $this->user_id = $user_id;
+        $this->user_type = "Registered User";
+    }
+    
+    public function __get($name) {
+        return $this->$name;
+    }
+    
+    public function __set($name, $value) {
+        $this->$name = $value;
+        return;
+    }
+    
+    public function __destruct() {
+
+    }
+}
 ?>
