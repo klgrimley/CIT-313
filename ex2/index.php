@@ -4,8 +4,8 @@ include_once 'classes/user.class.php';
 include_once 'classes/registered.class.php';
 include_once 'classes/admin.class.php';
 
-$registered_user = new Registered('one', '0001');
-$admin_user = new Admin('two', '0002');
+$registered_user = new Registered('User', 'jsmith');
+$admin_user = new Admin('Admin', 'tjohnson');
 
 $registered_user->first_name = "Joe";
 $registered_user->last_name = "Smith";
@@ -19,6 +19,12 @@ $admin_user->email_address = "tom@johnson.com";
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Exercise 2</title>
+        <style>
+            hr {
+                width: 20%;
+                float: left;
+            }
+        </style>
     </head>
     <body>
         <div class="info">
@@ -36,7 +42,7 @@ $admin_user->email_address = "tom@johnson.com";
         <div class="info">
             Email: <?php echo $registered_user->email_address ?>
         </div>
-        <br>
+        <hr><br>
         <div class="info">
             Name: <?php echo $admin_user->first_name . " " . $admin_user->last_name ?>
         </div>
