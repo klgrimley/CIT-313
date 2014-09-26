@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <?php
+//function autoload($class){
+//    include_once 'classes/'.strtolower($class).'.class.php';
+//}
+//spl_autoload_register('autoload');
+
 spl_autoload_register(function ($class) {
-            include 'classes/' . $class . '.class.php';
+            include 'classes/' . strtolower($class) . '.class.php';
         });
 
 $registered_user = new Registered('User', 'jsmith');
