@@ -14,7 +14,7 @@ $registered_user = new Registered('regular', 'newuser');
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Exercise 3</title>
-        <link rel="stylesheet" type="text/css" href="/GitHub/CIT313-Fall2014/CIT-313/ex3/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="../css/styles.css" />
     </head>
     <body>
         <div class="wrapper">
