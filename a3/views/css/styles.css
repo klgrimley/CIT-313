@@ -1,0 +1,24 @@
+/* 
+    Document   : styles
+    Created on : Oct 18, 2014, 6:43:02 PM
+    Author     : Kevin
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+h3 {
+    margin-bottom: 0;
+}
+
+.post-meta-data {
+    font-size: .8em;
+    margin-top: 0;
+    font-style: italic;    
+    position: relative;
+    top: -1em;
+}
+
