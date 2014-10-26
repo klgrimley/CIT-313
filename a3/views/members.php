@@ -24,7 +24,7 @@ if (is_array($user)) {
         </div>
 
     <?php foreach ($users as $u) { ?>
-            <h3><a href="<?php echo BASE_URL ?>members/view/<?php echo $u['uID']; ?>"<?php echo $u['email']; ?></a></h3>
+            <h3><a href="<?php echo BASE_URL ?>members/view/<?php echo $u['uID']; ?>"><?php echo $u['email']; ?></a></h3>
             <p><?php echo $u['first_name'] . ' ' . $u['last_name']; ?></p>
             <p><?php echo "<a href='mailto:".$u['email']."'>".$u['email']."</a>";?>
     <?php } ?>
