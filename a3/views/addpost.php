@@ -33,7 +33,8 @@
           <textarea id="tinyeditor" name="post_content" style="width:556px;height: 200px"><?php echo $content?></textarea>
     			<br/>
           <input type="hidden" name="pID" value="<?php echo $pID?>"/>
-          <button id="submit" type="submit" class="btn btn-primary" >Submit</button>
+          <input type="hidden" name="uID" value="2"/>
+          <button id="add-post" type="submit" class="form-button" >Submit</button>
         </form>
 
         

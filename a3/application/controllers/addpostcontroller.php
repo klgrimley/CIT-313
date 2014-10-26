@@ -24,7 +24,7 @@ class AddPostController extends Controller{
 		
 			$this->postObject = new Post();
 			
-			$data = array('title'=>$_POST['post_title'],'content'=>$_POST['post_content'],'categoryID'=>$_POST['post_category'], 'date'=>$_POST['post_date']);
+			$data = array('title'=>$_POST['post_title'],'content'=>$_POST['post_content'],'categoryID'=>$_POST['post_category'], 'date'=>$_POST['post_date'], 'uID'=>$_POST['uID']);
 			
 			$result = $this->postObject->addPost($data);
 			
