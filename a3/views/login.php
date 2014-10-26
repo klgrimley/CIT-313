@@ -7,7 +7,7 @@
             <input id="username" type="text" name="username">
             <label id="password_label" type="password" for="password">Password:</label>
             <input id="password" type="password" name="password">
-            <button id="submit" type="submit">Log In</button>
+            <button id="login" class="form-button" type="submit">Login</button>
         </form>
 
     </div>
