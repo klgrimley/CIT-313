@@ -9,7 +9,6 @@ class BlogController extends Controller{
 		$this->postObject = new Post();
 		$post = $this->postObject->getPost($pID);	    
 	  	$this->set('post',$post);
-	   
    	}
 	
 	public function defaultTask(){
@@ -18,8 +17,6 @@ class BlogController extends Controller{
 		$posts = $this->postObject->getAllPosts();
 		$this->set('title', 'The Default Blog View');
 		$this->set('posts',$posts);
-	
 	}
-	
-	
 }
+?>
