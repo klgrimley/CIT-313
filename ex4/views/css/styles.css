@@ -46,3 +46,7 @@ h3 {
     transform: translate(1px,1px);
 }
 
+input, textarea{
+    height: auto !important;
+}
+
