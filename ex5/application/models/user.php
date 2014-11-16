@@ -43,7 +43,7 @@ class User extends Model {
     }
     
     public function getUser($uID) {
-        $sql = 'SELECT uID, email, first_name, last_name, email, password
+        $sql = 'SELECT uID, email, first_name, last_name, password
                 FROM users 
                 WHERE uID = ?';
 

@@ -28,8 +28,7 @@ if (is_array($post)) {
 
     <?php foreach ($posts as $p) { ?>
             <h3><a href="<?php echo BASE_URL ?>blog/view/<?php echo $p['pID']; ?>" title="<?php echo $p['title']; ?>"><?php echo $p['title']; ?></a></h3>
-            <p class="post-meta-data"><?php $date = date("F j, Y");
-            echo $date . ' by: ' . $p['first_name'] . ' ' . $p['last_name'] . ' in: ' . $p['name']; ?></p>
+            <p class="post-meta-data"><?php echo $p['date'] = date('F j, Y', strtotime($p['date'])) . ' by: ' . $p['first_name'] . ' ' . $p['last_name'] . ' in: ' . $p['name']; ?></p>
             <p><?php echo $p['content']; ?></p>
 
     <?php } ?>
