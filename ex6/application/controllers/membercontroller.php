@@ -4,7 +4,7 @@ class MemberController extends Controller{
 	
 	public $userObject;
    
-   	public function view($uID){
+   	public function user($uID){
 
 		$this->userObject = new User();
 		$user = $this->userObject->getUser($uID);	    

@@ -6,8 +6,8 @@ class Post extends Model {
 
         $sql = 'SELECT posts.pID, posts.title, posts.content, posts.date, posts.categoryID, posts.uID, users.first_name, users.last_name, categories.name 
                     FROM posts 
-                    INNER JOIN users ON posts.uID=users.uID 
-                    INNER JOIN categories ON posts.categoryID=categories.categoryID
+                    INNER JOIN users ON users.uID=posts.uID
+                    INNER JOIN categories ON categories.categoryID=posts.categoryID
                     WHERE pID = ?';
 
         // perform query
