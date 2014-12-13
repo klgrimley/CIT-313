@@ -32,7 +32,7 @@ class ManagePostsController extends Controller {
         $this->set('title', $post['title']);
         $this->set('content', $post['content']);
         $this->set('date', $post['date']);
-        $this->set('category', $post['category']);
+        $this->set('category', $post['categoryID']);
         $this->set('task', 'update');
     }
 

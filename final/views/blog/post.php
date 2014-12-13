@@ -15,25 +15,29 @@ if (is_array($post)) {
 
     <?php echo $content; ?>
     <div id="comments-body">
+        <br>
         <h3> Comments</h3>
+        <br>
+        <?php if(isset($comments)) foreach ($comments as $c){ ?>
         <div class="well">
-            <span class="post-meta-data"><?php echo 'by: ' . $first_name . ' ' . $last_name . ' on: ' . $date = date('F j, Y', strtotime($date)); ?></span>
+            <span class="post-meta-data"><?php echo 'by: ' . $c['first_name'] . ' ' . $c['last_name'] . ' on: ' . $c['date'] = date('F j, Y', strtotime($c['date'])); ?></span>
             <br>
-            <?php $commentText ?>
+            <?php echo $c['commentText']; ?>
             <form method="POST" action="#">
-                <input id="commentID" type="hidden" value="<?php echo $pID; ?>">
+                <input id="commentID" type="hidden" value="<?php echo $c['commentID']; ?>">
             </form>
         </div>
+        <?php } ?>
     </div>
     <?php
     if ($u->isRegistered()) {
         ?>
-        <form method="POST" action="#">
+        <form method="POST" action="<?php echo BASE_URL?>post/<?php echo $task?>" onsubmit="editor.post()">
             <textarea id="textComment" class="form-control" rows="3" placeholder="Write your comment here." name="textComment"></textarea>
             <br>
             <input id="submitComment" class="btn btn-primary" type="submit" value="Comment">
             <input id="pid" type="hidden" value="<?php echo $pID; ?>" name="pid">
-            <input id="uid" type="hidden" value="<?php echo $uID; ?>" name="uid">
+            <input id="uid" type="hidden" value="<?php echo $_SESSION['uID']; ?>" name="uid">
         </form>
     <?php } ?>
 </div>

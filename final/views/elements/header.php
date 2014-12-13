@@ -62,13 +62,14 @@
                                     <ul class="dropdown-menu" role="menu"><?php if ($u->isAdmin()) { ?>
                                             <li><a href="<?php echo BASE_URL ?>manageposts/welcome">Add Blog Post</a></li>
                                         <?php } ?>
+                                        <li><a href="<?php echo BASE_URL ?>member/profile/">My Profile</a></li>
                                         <li><a href="<?php echo BASE_URL ?>login/logout/">Log Out</a></li>
                                     </ul>
                                 </li>
                             </ul>
 
                         <?php } else { ?>
-                        <ul class="nav pull-right">
+                            <ul class="nav pull-right">
                                 <li><a href="<?php echo BASE_URL . "login/?location=" . urlencode($_SERVER['REQUEST_URI']); ?>">Login</a></li>
                                 <li><a href="<?php echo BASE_URL ?>register/">Register</a></li>
                             </ul>
@@ -79,5 +80,5 @@
         </div>
         <div id="header-image" class='container'>
             <img src="<?php echo BASE_URL ?>views/img/header.jpg" />
-        <h1 class="main-h1">CIT 313 Blog</h1>
+            <h1 class="main-h1">CIT 313 Blog</h1>
         </div>

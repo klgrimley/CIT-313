@@ -4,12 +4,12 @@
 	<div class="page-header">
    <h1>Add Post Welcome</h1>
   </div>
-  <?php if($message){?>
+  <?php if(isset($message)){ if($message){?>
     <div class="alert alert-success">
     <button type="button" class="close" data-dismiss="alert">×</button>
     	<?php echo $message?>
     </div>
-  <?php }?>
+  <?php }}?>
   <div class="row">
       <div class="span8">
           <a href="<?php echo BASE_URL;?>manageposts/add" class="btn btn-primary">Add A Post</a>

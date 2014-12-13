@@ -18,5 +18,11 @@ class MemberController extends Controller{
 		$this->set('title', 'Site Members');
 		$this->set('users',$users);
 	}
+        
+        public function update($uID) {
+            $this->userObject = new User();
+            $user = $this->update($uID);
+            $this->set('profile', $user);
+        }
 }
 ?>

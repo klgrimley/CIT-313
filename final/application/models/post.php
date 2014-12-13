@@ -24,7 +24,7 @@ class Post extends Model {
 
             $numposts = ' LIMIT ' . $limit;
         }
-
+        
         $sql = 'SELECT posts.pID, posts.title, posts.content, posts.date, posts.categoryID, posts.uID, users.first_name, users.last_name, categories.name 
                     FROM posts 
                     INNER JOIN users ON posts.uID=users.uID
@@ -49,17 +49,27 @@ class Post extends Model {
     }
     
     public function getComments($pID) {
-        $sql = 'SELECT comments.commentID, comments.uID, comments.commentText, comments.date, comments, postID, users.first_name, users.last_name  
+        $sql = 'SELECT comments.commentID, comments.uID, comments.commentText, comments.date, comments.postID, users.first_name, users.last_name  
                     FROM comments 
                     INNER JOIN users ON users.uID=comments.uID
-                    WHERE postID = ?';
+                    WHERE comments.postID ='. $pID;
 
         // perform query
-        $results = $this->db->getrow($sql, array($pID));
+        $results = $this->db->execute($sql);
 
-        $comments = $results;
+        while ($row = $results->fetchrow()) {
+            $comments[] = $row;
+        }
 
         return $comments;
+    }
+    
+    public function addComment($data) {
+
+        $sql = 'INSERT INTO comments (uID, commentText, date, postID) VALUES (?,?,?,?)';
+        $this->db->execute($sql, $data);
+        $message = 'Comment added.';
+        return $message;
     }
 
 }

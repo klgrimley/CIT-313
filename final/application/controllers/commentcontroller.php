@@ -15,7 +15,7 @@ class CommentController extends Controller {
 
         $this->commentObject = new Comment();
         $data = array('uID' => $_POST['uid'], 'commentText' => $_POST['textComment'], 'date' => date(), 'uID' => $_POST['uid']);
-        $result = $this->postObject->addPost($data);
+        $result = $this->commentObject->addComment($data);
         $this->set('message', $result);
     }
     
