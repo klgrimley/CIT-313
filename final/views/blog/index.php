@@ -10,7 +10,7 @@
     <div class='span8'>
         <?php foreach ($posts as $p) { ?>
             <h3><a href="<?php echo BASE_URL ?>blog/post/<?php echo $p['pID']; ?>" title="<?php echo $p['title']; ?>"><?php echo $p['title']; ?></a></h3>
-            <p class="post-meta-data"><?php echo $p['date'] = date('F j, Y', strtotime($p['date'])) . ' by: ' . $p['first_name'] . ' ' . $p['last_name'] . ' in: <a href="' . BASE_URL . 'category/category/' . $p['categoryID'] . '">' . $p['name']; ?></a></p>
+            <p class="post-meta-data"><?php echo $p['date'] = date('F j, Y', strtotime($p['date'])) . ' by: ' . $p['first_name'] . ' ' . $p['last_name'] . ' in: <a href="' . BASE_URL . 'category/categories/?categoryID=' . $p['categoryID'] . '">' . $p['name']; ?></a></p>
                 <p><?php echo substr($p['content'], 0, 75); ?> <a href="<?php echo BASE_URL ?>blog/post/<?php echo $p['pID']; ?>">[...]</a></p>
             <div style="margin-top:15px;"><a href="<?php echo BASE_URL ?>ajax/get_post_content/?pID=<?php echo $p['pID']; ?>" class="btn post-loader">View Entire Post</a></div>
         <?php } ?>
