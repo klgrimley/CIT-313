@@ -10,7 +10,7 @@ if (is_array($post)) {
     <div class="page-header">
 
         <h1><?php echo $title; ?></h1>
-        <p class="post-meta-data"><?php echo $date = date('F j, Y', strtotime($date)) . ' by: ' . $first_name . ' ' . $last_name . ' in: ' . $name; ?></p>
+        <p class="post-meta-data"><?php echo $date = date('F j, Y', strtotime($date)) . ' by: ' . $first_name . ' ' . $last_name . ' in: <a href="' .BASE_URL.'category/category/'.$categoryID.'">' . $name; ?></a></p>
     </div>
 
     <?php echo $content; ?>

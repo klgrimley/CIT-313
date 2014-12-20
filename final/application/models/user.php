@@ -28,7 +28,7 @@ class User extends Model {
     } 
     
     public function isRegistered() {
-        if(isset($this->user_type)){
+        if($this->user_type == '2'){
             return true;
         }else{
             return false;
