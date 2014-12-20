@@ -60,9 +60,9 @@
                             <ul class="nav pull-right">
                                 <li class="dropdown"><a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown"><?php echo $u->getUserName(); ?><b class="caret"></b></a>
                                     <ul class="dropdown-menu" role="menu"><?php if ($u->isAdmin()) { ?>
-                                            <li><a href="<?php echo BASE_URL ?>manageposts/welcome">Manage Posts</a></li>
-                                            <li><a href="<?php echo BASE_URL ?>managecategories/welcome">Manage Categories</a></li>
-                                            <li><a href="<?php echo BASE_URL ?>manageusers/welcome">Manage Users</a></li>
+                                            <li><a href="<?php echo BASE_URL ?>manageposts">Manage Posts</a></li>
+                                            <li><a href="<?php echo BASE_URL ?>category">Manage Categories</a></li>
+                                            <li><a href="<?php echo BASE_URL ?>manageusers">Manage Users</a></li>
                                         <?php } ?>
                                         <li><a href="<?php echo BASE_URL ?>member/profile/">My Profile</a></li>
                                         <li><a href="<?php echo BASE_URL ?>login/logout/">Log Out</a></li>
