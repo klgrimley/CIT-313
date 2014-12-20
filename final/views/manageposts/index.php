@@ -32,7 +32,7 @@
             <p class="post-meta-data"><?php echo $p['date'] = date('F j, Y', strtotime($p['date'])); ?></a></p>
             <a class="btn" href="<?php echo BASE_URL ?>blog/post/<?php echo $p['pID']; ?>">View Post</a>
             <a class="btn" href="<?php echo BASE_URL ?>manageposts/edit/<?php echo $p['pID']; ?>">Edit Post</a>
-            <a class="btn" href="<?php echo BASE_URL ?>manageposts/delete/<?php echo $p['pID']; ?>">Delete Post</a>
+            <a class="btn" href="<?php echo BASE_URL ?>manageposts/delete/?pID=<?php echo $p['pID']; ?>">Delete Post</a>
 
 <?php } ?>
     </div>

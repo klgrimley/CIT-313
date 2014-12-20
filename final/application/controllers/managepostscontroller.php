@@ -54,5 +54,12 @@ class ManagePostsController extends Controller {
         $this->getCategories();
         $this->set('task', 'update');
     }
+    
+    public function delete($pID) {
+        $pID = $_GET['pID'];
+        $this->postObject = new Post();
+        $post = $this->postObject->delete($pID);
+        $this->set('pID', $post);
+    }
 
 }

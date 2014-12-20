@@ -71,5 +71,14 @@ class Post extends Model {
         $message = 'Comment added.';
         return $message;
     }
+    
+    public function delete($pID) {
+        $sql = 'DELETE * 
+            FROM posts 
+            WHERE pID = ?';
+        $this->db->execute($sql, $pID);
+        $message = 'Post Deleted';
+        return $message;
+    }
 
 }

@@ -27,8 +27,8 @@ $categoryID = $_GET['categoryID'];
         echo '<br>';
         var_dump($sql);echo '<br>';
         // perform query
-        //$results = $this->db->execute($sql, array($categoryID));
-        $results = $this->db->getrow($sql, array($categoryID));
+        //$results = $this->db->execute($sql);
+        $results = $this->db->getrow($sql);
 var_dump($results);
         while ($row = $results->fetchrow()) {
             $categories[] = $row;
