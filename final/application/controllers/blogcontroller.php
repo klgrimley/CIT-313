@@ -24,6 +24,13 @@ class BlogController extends Controller {
         $comments = $this->postObject->getComments($pID);
         $this->set('comments', $comments);
     }
+    
+    public function categories($categoryID) {
+        $this->categoryObject = new Category();
+        $categories = $this->categoryObject->getCategory($categoryID);
+        $this->set('title', 'This is a test');//$categories['name'].' Articles');
+        $this->set('categories', $categories);
+    }
 
 }
 
